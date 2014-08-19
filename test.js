@@ -34,17 +34,18 @@ $(function(){
 		
 		// Called before each upload is started
 		beforeEach: function(file){
-			if(!file.type.match(/^image\//)){
-				alert('Only images are allowed!');
+			return true;
+			// if(!file.type.match(/^image\//)){
+			// 	alert('Only images are allowed!');
 				
-				// Returning false will cause the
-				// file to be rejected
-				return false;
-			}
+			// 	// Returning false will cause the
+			// 	// file to be rejected
+			// 	return false;
+			// }
 		},
 		
 		uploadStarted:function(i, file, len){
-			createImage(file);
+			// createImage(file);
 		},
 		
 		progressUpdated: function(i, file, progress) {
