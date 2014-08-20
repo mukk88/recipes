@@ -111,11 +111,13 @@ li{
 	font-size: 2em;
 	border: 1px solid;
 	padding: 1em;
+	/*box-shadow: 10px 10px 5px #888888;*/
 }
 
 #form input[type=text]{
 	font-size: 0.7em;
 	width: 50%;
+	font-family: inherit;
 }
 
 #submit{
@@ -128,6 +130,15 @@ li{
 	border:none;
 }
 
+#dropbox{
+	width: 5em;
+	height: 5em;
+	border: 1px solid;
+	text-align: center;
+	vertical-align: center; 
+	font-size: 0.5em;
+	float:right;
+}
 
 
 

@@ -2,8 +2,7 @@
 <head>
   <title>Add Recipe</title>
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-  <script type="text/javascript" src="uploader.js"></script>
-  <script type="text/javascript" src="test.js"></script>
+  <script type="text/javascript" src="upload.js"></script>
   <link href='http://fonts.googleapis.com/css?family=Waiting+for+the+Sunrise' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" type="text/css" href="recipes.css">
 </head>
@@ -16,12 +15,12 @@
       <div class="addtitle">new recipe</div>
     </div>
     <div class="main">
-        <div id="dropbox">
-          <span class="message">Drop images here to upload. <br /><i>(they will only be visible to you)</i></span>
-        </div>
+        <!-- <div id="dropbox">
+          <span class="message">Drop images here to upload.</span>
+        </div> -->
 
 
-<!--       <form id="form">
+      <form id="form" action="uploadfile.php" method="post">
         <label for="title">Title:</label>
         <input type="text" name="title" id="title">
         <br>
@@ -37,6 +36,7 @@
 
         <label for="image">Image:</label>
         <input type="file" name="image" id="image">
+        <!-- <div id="dropbox"><br>Drag file here</div> -->
         <br>
 
         <label for="pdf">Recipe PDF:</label>
@@ -44,7 +44,7 @@
         <br>
 
         <button id="submit">Add</button>
-      </form> -->
+      </form>
 
       <!-- add tags later -->
 

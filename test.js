@@ -7,7 +7,7 @@ $(function(){
 		// The name of the $_FILES entry:
 		paramname:'pic',
 		
-		maxfiles: 5,
+		maxfiles: 1,
     	maxfilesize: 2,
 		url: 'post_file.php',
 		
