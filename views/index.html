@@ -1,0 +1,57 @@
+<html>
+<head>
+  <title>Add Recipe</title>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script type="text/javascript" src="upload.js"></script>
+  <link href='http://fonts.googleapis.com/css?family=Waiting+for+the+Sunrise' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" type="text/css" href="css/recipes.css">
+</head>
+<body>
+  <div class="container">
+    <div class="searchcontainer">
+      <div class="btn">back</div>
+    </div>
+    <div class="top">
+      <div class="addtitle">new recipe</div>
+    </div>
+    <div class="main">
+        <!-- <div id="dropbox">
+          <span class="message">Drop images here to upload.</span>
+        </div> -->
+
+        <a href=""></a>
+
+
+      <form id="form" action="uploadfile.php" method="post" enctype="multipart/form-data">
+        <label for="title">Title:</label>
+        <input type="text" name="title" id="title">
+        <br>
+
+        <label for="category">Catergory:</label>
+        <select id="cat">
+          <option>Breakfast</option>
+          <option>Main</option>
+          <option>Dessert</option>
+          <option>Appetizer</option>
+        </select>
+        <br>
+
+        <label for="image">Image:</label>
+        <input type="file" name="image" id="image">
+        <!-- <div id="dropbox"><br>Drag file here</div> -->
+        <br>
+
+        <label for="pdf">Recipe PDF:</label>
+        <input type="file" name="pdf" id="pdf">
+        <br>
+
+        <button id="submit">Add</button>
+      </form>
+
+      <!-- add tags later -->
+
+    </div>
+  </div>
+
+</body>
+</html>

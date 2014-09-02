@@ -1,0 +1,31 @@
+extends layout
+
+block content
+	.container
+		.searchcontainer
+			.btn
+				span back
+		.top
+			.titleadds
+				| new recipe
+		.main
+			form#form(action='uploadfile.php', method='post', enctype='multipart/form-data')
+				label(for='title') Title:
+				input#title(type='text', name='title')
+				br
+				label(for='category') Catergory:
+				select#cat
+				option Breakfast
+				option Main
+				option Dessert
+				option Appetizer
+				br
+				label(for='image') Image:
+				input#image(type='file', name='image')
+				br
+				label(for='pdf') Recipe PDF:
+				input#pdf(type='file', name='pdf')
+				br
+				button#submit Add
+  script(src='http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js')
+  script(src='/js/upload.js')

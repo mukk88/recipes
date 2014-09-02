@@ -1,0 +1,59 @@
+extends layout
+
+block content
+	#recipes.container
+		.searchcontainer
+			input#totalsearch.search(placeholder='Search')
+			.btn add
+		.top
+			.title woo fam trade secrets
+		.main
+			#breakfast.type
+				.title Breakfast
+				.images
+					ul.list
+						li
+							img(src='http://busybeekate.com/wp-content/uploads/2014/07/brown-sugar-blueberry-muffins-2.jpg')
+							.name Blueberrry muffins
+						li
+							img(src='http://2.bp.blogspot.com/_AWEhM2Nug4g/S9S4YGCv_II/AAAAAAAAHKI/vyOIHwmya_0/s1600/Scone+1.jpg')
+							.name Scones
+			#appetizer.type
+				.title Appetizer
+				.images
+					ul.list
+						li
+							img(src='http://blogs.mydevstaging.com/blogs/daily-dish/files/2012/04/mexican-salad-2.jpg')
+							.name Summer Salad
+			#main.type
+				.title Main
+				.images
+					ul.list
+						li
+							img(src='http://2.bp.blogspot.com/-jf2bFOUlEW4/UM6CQ34-A9I/AAAAAAAAAaM/2UrpBPQlp0A/s1600/indianchickencurry.JPG')
+							.name Curry chicken
+						li
+							img(src='https://warosu.org/data/ck/img/0053/93/1398860607654.jpg')
+							.name Chicken rice
+						li
+							img(src='http://www.laksasingapore.com/wp-content/uploads/2011/11/Laksa33.jpg')
+							.name Laksa
+						li
+							img(src='http://upload.wikimedia.org/wikipedia/commons/7/75/Newton_HokkienMee.JPG')
+							.name Hokkien Mee
+			#dessert.type
+				.title Desserts
+				.images
+					ul.list
+						li
+							img(src='http://cimages.proflowers.com/is/image/ProvideCommerce/GFB_13_SCA6AMERBTY_PR1000_W1_SQ')
+							.name chocolate cake
+						li
+							img(src='http://chasingdelicious.com/wp-content/uploads/2011/05/CAKE-CU-SMALL.png')
+							.name berry cake
+						li
+							img(src='http://cdn-media-2.lifehack.org/wp-content/files/2013/11/20-Easy-And-Amazingly-Tasty-Dessert-Recipes.jpg')
+							.name berry tart    
+	script(src='http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js')
+	script(src='http://listjs.com/no-cdn/list.js')
+	script(src='/js/recipes.js')

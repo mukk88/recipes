@@ -1,0 +1,153 @@
+html,body { height:100%; }
+
+body{
+	margin: 0;
+	font: 1em;
+	font-family: 'Waiting for the Sunrise', cursive;
+	background-color: #fcfcfc;
+}
+
+.container{
+	width:60%;
+	min-width: 650px;
+	left:0;
+	right:0;
+	margin-right: auto;
+	margin-left: auto;
+	margin-top: 1em;
+}
+
+.btn{
+	float: right;
+	padding:  0 1em;
+	font-size: 1.2em;
+	background-color: cornflowerblue;
+	color:white;
+}
+
+#totalsearch{
+	font-size: 1em;
+	font-family: inherit;
+}
+
+.btn:hover{
+	color:black;
+}
+
+.top{
+	/*height:4em;*/
+	/*border: 1px solid;*/
+	width:100%;
+	font-size: 3em;
+	text-align: center;
+	padding: 1 0em;
+	margin-bottom: 0.2em;
+}
+
+.main{
+	/*border: 2px solid;*/
+	/*border-color: red;*/
+	width:100%;
+	padding: 0;
+	margin:0;
+	display: block;
+}
+
+.main input{
+	/*display: none;*/
+}
+
+.type{
+	width:25%;
+	float:left;
+	/*border: 1px solid;*/
+	margin-left:0px;
+	margin-right: 0px;
+	padding: 0px;
+	text-align: center;
+	font-size: 2em;
+}
+
+.images{
+	width:95%;
+	display: inline-block;
+	height:13em;
+	overflow: scroll;
+}
+
+ul{
+	list-style-type: none;
+	padding: 0;
+	margin:0;
+}
+
+li{
+	list-style-type: none;
+}
+
+.images .name{
+	font-size: 0.7em;
+	margin-top: -0.5em;
+	margin-bottom: 0.5em;
+}
+
+.images .name:hover{
+	opacity: 0.4;
+}
+
+.images img{
+	width:100%;
+	margin-bottom: 0.3em;
+}
+
+.images img:hover{
+	opacity: 0.4;
+}
+
+.titleadds{
+	margin-left: 10%;
+	margin-top: 0.5em;
+}
+
+#form{
+	font-size: 2em;
+	border: 1px solid;
+	padding: 1em;
+	/*box-shadow: 10px 10px 5px #888888;*/
+}
+
+#form select,
+#form input[type=file]{
+	margin-left: 1.5em;
+}
+
+#form input[type=text]{
+	margin-left: 1em;
+	top: -0.2em;
+	font-size: 0.6em;
+	width: 50%;
+	font-family: inherit;
+}
+
+#submit{
+	font-family: inherit;
+	font-size: 0.6em;
+	padding: 0em 1em;
+	margin-top: 1.5em;
+	background-color:cornflowerblue; 
+	color: white;
+	border:none;
+}
+
+#dropbox{
+	width: 5em;
+	height: 5em;
+	border: 1px solid;
+	text-align: center;
+	vertical-align: center; 
+	font-size: 0.5em;
+	float:right;
+}
+
+
+
