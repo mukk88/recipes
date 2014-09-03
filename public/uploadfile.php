@@ -22,7 +22,7 @@ if ((($_FILES["image"]["type"] == "image/gif")
       echo $_FILES["image"]["name"] . " already exists. ";
     } else {
       move_uploaded_file($_FILES["image"]["tmp_name"], "images/" . $_FILES["image"]["name"]);
-      move_uploaded_file($_FILES["pdf"]["tmp_name"], "pdf/" . $_FILES["pdf"]["name"]);
+      move_uploaded_file($_FILES["pdf"]["tmp_name"], "images/pdf/" . $_FILES["pdf"]["name"]);
       // echo "Stored in: " . "images/" . $_FILES["image"]["name"] . "<br>";
       // echo "Stored in: " . "pdf/" . $_FILES["pdf"]["name"];
       echo "Upload successful! <br> Go to <a href='http://woorecipes.azurewebsites.net/recipes'>Home</a> to check it out!";
