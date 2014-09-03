@@ -45,7 +45,7 @@ router.get('/recipes', function(req,res){
 	res.render('recipes');
 });
 
-router.post('/recipes/add', function(req,res){
+router.post('/recipe/add', function(req,res){
 	var name = req.body.name;
 	var image = req.body.image;
 	var pdf = req.body.pdf;
