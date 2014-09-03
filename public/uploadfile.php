@@ -25,7 +25,7 @@ if ((($_FILES["image"]["type"] == "image/gif")
       move_uploaded_file($_FILES["pdf"]["tmp_name"], "pdf/" . $_FILES["pdf"]["name"]);
       // echo "Stored in: " . "images/" . $_FILES["image"]["name"] . "<br>";
       // echo "Stored in: " . "pdf/" . $_FILES["pdf"]["name"];
-      echo "Upload successful! <br> Go to <a href='http://woorecipes.azurewebsites.net/recipes.html'>Home</a> to check it out!";
+      echo "Upload successful! <br> Go to <a href='http://woorecipes.azurewebsites.net/recipes'>Home</a> to check it out!";
     }
   }
 } else {
