@@ -69,7 +69,7 @@ router.post('/recipe/add', function(req,res){
 			res.send(false);
 		}
 	});
-	res.send(1);
+	// res.send(1);
 });
 
 
