@@ -1,7 +1,7 @@
 $(function(){
 
 	$('#submit').click(function(){
-		var imgname = 'images/' + $('#image').val().replace(/^.*[\\\/]/, '');
+		var imgname = $('#image').val().replace(/^.*[\\\/]/, '');
 		var pdfname = 'pdf/' + $('#pdf').val().replace(/^.*[\\\/]/, '');
 		var title = $('#title').val();
 		var cat = $("#cat").find(":selected").text();
@@ -10,8 +10,6 @@ $(function(){
 
 		//do a post here
 		$.post( "http://woorecipes.azurewebsites.net/recipe/add", { name: title, image:imgname, pdf:pdfname, cat:cat, tags:tags} );
-
-		alert('submit');
 	});	
 
 });
