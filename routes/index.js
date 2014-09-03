@@ -42,7 +42,7 @@ router.get('/recipes', function(req,res){
 
 	// });
 
-	res.render('recipes', {recipes: allRecipes});
+	res.render('recipes');
 });
 
 router.post('/recipes/add', function(req,res){
