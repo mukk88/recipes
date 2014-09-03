@@ -9,7 +9,7 @@ $(function(){
 		console.log(title + ' ' + cat + ' ' +  imgname + ' ' + pdfname);
 
 		//do a post here
-		$.post( "http://woorecipes.azurewebsites.net/recipe/add", { name: "John", image: "2pm", pdf:"pdf", cat:"cat", tags:"tags"} );
+		$.post( "http://woorecipes.azurewebsites.net/recipe/add", { name: "John"} );
 
 		alert('submit');
 	});	
