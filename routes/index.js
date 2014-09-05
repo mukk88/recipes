@@ -36,7 +36,6 @@ router.get('/add', function(req, res) {
 });
 
 router.get('/', function(req,res){
-
 	var allRecipes;
 	Recipe.find({}, function(err,allrecipes){
 		res.render('recipes', {recipes:allrecipes});
