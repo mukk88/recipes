@@ -31,11 +31,11 @@ recipeSchema.plugin(autoIncrement.plugin, { model: 'Recipe', startAt: 1 });
 var Recipe = mongoose.model('Recipe', recipeSchema);
 
 /* GET and POST */
-router.get('/', function(req, res) {
+router.get('/add', function(req, res) {
   res.render('index', { title: 'Express' });
 });
 
-router.get('/recipes', function(req,res){
+router.get('/', function(req,res){
 
 	var allRecipes;
 	Recipe.find({}, function(err,allrecipes){
