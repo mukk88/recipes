@@ -71,8 +71,8 @@ body{
 .images{
 	width:95%;
 	display: inline-block;
-	height:13em;
-	overflow: scroll;
+	height:16em;
+	overflow-y: scroll;
 }
 
 ul{
@@ -89,6 +89,11 @@ li{
 	font-size: 0.7em;
 	margin-top: -0.5em;
 	margin-bottom: 0.5em;
+	text-decoration: none;
+}
+
+a{
+	text-decoration: none;
 }
 
 .images .name:hover{

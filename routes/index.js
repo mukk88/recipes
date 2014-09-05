@@ -37,12 +37,11 @@ router.get('/', function(req, res) {
 
 router.get('/recipes', function(req,res){
 
-	// var allRecipes;
-	// Recipe.find({}, function(err,recipes){
-
-	// });
-
-	res.render('recipes');
+	var allRecipes;
+	Recipe.find({}, function(err,allrecipes){
+		res.render('recipes', {recipes:allrecipes});
+		console.log(allrecipes);
+	});
 });
 
 router.post('/recipe/add', function(req,res){
