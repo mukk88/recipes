@@ -9,7 +9,7 @@ if ((($_FILES["image"]["type"] == "image/gif")
 || ($_FILES["image"]["type"] == "image/pjpeg")
 || ($_FILES["image"]["type"] == "image/x-png")
 || ($_FILES["image"]["type"] == "image/png"))
-&& ($_FILES["image"]["size"] < 200000)
+&& ($_FILES["image"]["size"] < 1000000)
 && in_array($extension, $allowedExts)) {
   if ($_FILES["image"]["error"] > 0) {
     echo "Return Code: " . $_FILES["image"]["error"] . "<br>";
