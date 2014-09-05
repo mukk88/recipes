@@ -1,8 +1,8 @@
 $(function(){
 
 	$('#submit').click(function(){
-		var imgname = $('#image').val().replace(/^.*[\\\/]/, '');
-		var pdfname = 'pdf/' + $('#pdf').val().replace(/^.*[\\\/]/, '');
+		var imgname = 'images/' + $('#image').val().replace(/^.*[\\\/]/, '');
+		var pdfname = 'images/pdf/' + $('#pdf').val().replace(/^.*[\\\/]/, '');
 		var title = $('#title').val();
 		var cat = $("#cat").find(":selected").text();
 		var tags = 'n/a';
