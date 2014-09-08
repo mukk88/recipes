@@ -19,6 +19,11 @@ block content
 						li
 							img(src='http://2.bp.blogspot.com/_AWEhM2Nug4g/S9S4YGCv_II/AAAAAAAAHKI/vyOIHwmya_0/s1600/Scone+1.jpg')
 							.name Scones
+						for r in recipes
+							if (r.cat == "Breakfast")
+								a(href='#{r.pdf}')
+									img(src="#{r.image}")
+									.name= r.name
 			#appetizer.type
 				.title Appetizer
 				.images
@@ -47,6 +52,11 @@ block content
 						li
 							img(src='http://upload.wikimedia.org/wikipedia/commons/7/75/Newton_HokkienMee.JPG')
 							.name Hokkien Mee
+						for r in recipes
+							if (r.cat == "Main")
+								a(href='#{r.pdf}')
+									img(src="#{r.image}")
+									.name= r.name
 			#dessert.type
 				.title Desserts
 				.images
@@ -60,6 +70,11 @@ block content
 						li
 							img(src='http://cdn-media-2.lifehack.org/wp-content/files/2013/11/20-Easy-And-Amazingly-Tasty-Dessert-Recipes.jpg')
 							.name berry tart    
+						for r in recipes
+							if (r.cat == "Dessert")
+								a(href='#{r.pdf}')
+									img(src="#{r.image}")
+									.name= r.name
 	script(src='http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js')
 	script(src='http://listjs.com/no-cdn/list.js')
 	script(src='/js/recipes.js')
