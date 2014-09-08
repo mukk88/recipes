@@ -27,9 +27,10 @@ block content
 							img(src='http://blogs.mydevstaging.com/blogs/daily-dish/files/2012/04/mexican-salad-2.jpg')
 							.name Summer Salad
 						for r in recipes
-							a(href='#{r.pdf}')
-								img(src="#{r.image}")
-								.name= r.name
+							if (r.cat == "appetizer")
+								a(href='#{r.pdf}')
+									img(src="#{r.image}")
+									.name= r.name
 			#main.type
 				.title Main
 				.images
