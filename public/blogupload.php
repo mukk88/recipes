@@ -17,7 +17,7 @@ if ((($_FILES["image"]["type"] == "image/gif")
     if (file_exists("images/" . $_FILES["image"]["name"])) {
       echo $_FILES["image"]["name"] . " already exists. ";
     } else {
-      move_uploaded_file($_FILES["image"]["tmp_name"], "../images" . $_FILES["image"]["name"]);
+      move_uploaded_file($_FILES["image"]["tmp_name"], "images/" . $_FILES["image"]["name"]);
       echo "Upload successful! ";
     }
   }
