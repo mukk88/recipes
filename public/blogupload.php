@@ -14,10 +14,10 @@ if ((($_FILES["image"]["type"] == "image/gif")
   if ($_FILES["image"]["error"] > 0) {
     echo "Return Code: " . $_FILES["image"]["error"] . "<br>";
   } else {
-    if (file_exists("images/blog/" . $_FILES["image"]["name"])) {
+    if (file_exists("../images/blog/" . $_FILES["image"]["name"])) {
       echo $_FILES["image"]["name"] . " already exists. ";
     } else {
-      move_uploaded_file($_FILES["image"]["tmp_name"], "images/blog/" . $_FILES["image"]["name"]);
+      move_uploaded_file($_FILES["image"]["tmp_name"], "../images/blog/" . $_FILES["image"]["name"]);
       echo "Upload successful! ";
     }
   }
