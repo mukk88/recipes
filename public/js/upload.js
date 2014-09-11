@@ -5,7 +5,7 @@ $(function(){
 		var pdfname = 'images/pdf/' + $('#pdf').val().replace(/^.*[\\\/]/, '');
 		var title = $('#title').val();
 		var cat = $("#cat").find(":selected").text();
-		var tags = 'n/a';
+		var tags = $('#tags').val();
 		console.log(title + ' ' + cat + ' ' +  imgname + ' ' + pdfname);
 
 		//do a post here
