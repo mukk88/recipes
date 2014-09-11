@@ -1,0 +1,186 @@
+.container{
+	width:60%;
+	min-width: 650px;
+	left:0;
+	right:0;
+	margin-right: auto;
+	margin-left: auto;
+	margin-top: 1em;
+}
+
+.container .header{
+	font-family: 'Waiting for the Sunrise', cursive;
+	text-align: center;
+	width: 100%;
+	font-size: 4em;
+	margin-top: 1em;
+}
+
+.navbar{
+	border-top: 1px solid;
+	border-bottom:1px solid;
+	line-height: 2em;
+	font-family: 'Open Sans', sans-serif;
+	margin-bottom: 3em;
+}
+
+.navbar a{
+	display: inline;
+}
+
+.navitem{
+	margin-left: 14%;
+	margin-right: 14%;
+	display: inline;
+	font-size: 0.8em;
+}
+
+.navitem:hover{
+	cursor: pointer;
+	cursor: hand;
+	color:grey;
+}
+
+.sidebar{
+	font-family: 'Open Sans', sans-serif;
+	float:right;
+	width:25%;
+}
+
+.sidebar .title{
+	margin-left: 10%;
+	line-height: 2em;
+	font-size: 1.1em;
+	margin-bottom: 0.3em;
+	color: grey;
+}
+
+.sidebar img{
+	width: 90%;
+	float: right;
+	margin-bottom: 1em;
+}
+
+.sidebar .content{
+	margin-left: 10%;
+	font-size: 0.9em;
+	line-height: 1.5em;
+}
+
+.sidebar .line{
+	height: 1em;
+	border-bottom: 1px solid lightgrey;
+	margin-left: 10%;
+}
+
+.sidebar .content .name{
+	margin-left: 5%;
+
+}
+
+.sidebar .content .date{
+	margin-left: 5%;
+	font-size:	0.8em;
+}
+
+.postteaser{
+	border: 1px solid;
+}
+
+
+.main .title{
+	font-family: 'Open Sans', sans-serif;
+}
+
+.main{
+	width:75%;
+}
+
+.postteaser{
+	padding: 1.2em;
+	margin-bottom: 3em;
+}
+
+.postteaser .title{
+	font-size: 2em;
+	text-align: left;
+	font-family: 'Lusitana', serif;
+}
+
+.postteaser .title:hover{
+	text-decoration: underline;
+}
+
+.postteaser .date{
+	font-size: 0.7em;
+	line-height: 3em;
+	margin-bottom: 1em;
+}
+
+.postteaser img{
+	width:40%;
+}
+
+.postteaser .content{
+	display: inline-block;
+	width:56%;
+	margin-left: 4%;
+	font-family: 'Open Sans', sans-serif;
+}
+
+.postteaser .content .text{
+	margin-bottom: 1em;
+	font-size: 0.9em;
+}
+
+.postteaser .content button{
+	padding: 0.5em 2em;
+	background-color: white;
+	border: 1px solid;
+	font-size: 0.8em;
+	font-family: inherit;
+}
+
+.postteaser .content button:hover{
+	cursor: pointer;
+	cursor: hand;
+	background-color: black;
+	color: white;
+}
+
+.post{
+	border:	1px solid;
+	padding: 1.2em;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 0.9em;
+}
+
+.post .title{
+	font-size:3em; 
+	font-family: 'Lusitana', serif;
+}
+
+.post .date{
+	font-size: 0.8em;
+	margin-bottom: 2em;
+}
+
+.post .content{
+
+}
+
+.post .content .para{
+	margin-bottom: 1.2em;
+}
+
+.post iframe{
+	display: block;
+	margin: 0 auto;
+	margin-top: 3em;
+	margin-bottom: 3em;
+}
+
+a{
+	text-decoration: none;
+	color:inherit;
+}

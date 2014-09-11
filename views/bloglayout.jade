@@ -1,0 +1,30 @@
+doctype html
+html
+	head
+		link(rel='stylesheet', href='/css/blog.css')
+		link(rel='stylesheet', href='http://fonts.googleapis.com/css?family=Waiting+for+the+Sunrise')
+		link(href='http://fonts.googleapis.com/css?family=Lusitana', rel='stylesheet')
+		link(href='http://fonts.googleapis.com/css?family=Open+Sans', rel='stylesheet')
+	body
+		.container
+			.header remarkabelle
+			.navbar
+				a(href='/blog') 
+					.navitem BLOG
+				.navitem ABOUT
+				.navitem CONTACT
+			.sidebar
+				.title WHO WE ARE
+				img(src='http://busybeekate.com/wp-content/uploads/2014/07/brown-sugar-blueberry-muffins-2.jpg', align="top")
+				.content 
+					| We are mark and isabelle, newlyweds from something something blah blah. a bunch of text to take up more space.
+					| We are mark and isabelle, newlyweds from something something blah blah. a bunch of text to take up more space.
+				.line
+				.title Recent posts
+				.content
+					.name We got fireworked!
+					.date 18 Augus, 2014
+				.line
+			.main
+				block content
+			

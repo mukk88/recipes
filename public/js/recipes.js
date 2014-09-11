@@ -1,5 +1,5 @@
 var options = {
-  valueNames: [ 'name' , 'tag']
+  valueNames: [ 'name' , 'tags']
 };
 
 var breakfastList = new List('breakfast', options);

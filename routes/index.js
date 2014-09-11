@@ -69,7 +69,13 @@ router.post('/recipe/add', function(req,res){
 	});
 });
 
+router.get('/blog', function(req,res){
+	res.render('blog');
+});
 
+router.get('/post', function(req,res){
+	res.render('samplepost');
+});
 
 
 module.exports = router;

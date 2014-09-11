@@ -21,6 +21,7 @@ block content
 							.name Scones
 						for r in recipes
 							if (r.cat == "Breakfast")
+								.tags= r.tags
 								a(href='#{r.pdf}')
 									img(src="#{r.image}")
 									.name= r.name
@@ -33,6 +34,7 @@ block content
 							.name Summer Salad
 						for r in recipes
 							if (r.cat == "Appetizer")
+								.tags= r.tags
 								a(href='#{r.pdf}')
 									img(src="#{r.image}")
 									.name= r.name
@@ -54,6 +56,7 @@ block content
 							.name Hokkien Mee
 						for r in recipes
 							if (r.cat == "Main")
+								.tags= r.tags
 								a(href='#{r.pdf}')
 									img(src="#{r.image}")
 									.name= r.name
@@ -73,6 +76,7 @@ block content
 						for r in recipes
 							if (r.cat == "Dessert")
 								a(href='#{r.pdf}')
+									.tags= r.tags
 									img(src="#{r.image}")
 									.name= r.name
 	script(src='http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js')
