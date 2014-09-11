@@ -21,10 +21,11 @@ block content
 							.name Scones
 						for r in recipes
 							if (r.cat == "Breakfast")
-								.tags= r.tags
-								a(href='#{r.pdf}')
-									img(src="#{r.image}")
-									.name= r.name
+								li
+									.tags= r.tags
+									a(href='#{r.pdf}')
+										img(src="#{r.image}")
+										.name= r.name
 			#appetizer.type
 				.title Appetizer
 				.images
@@ -34,10 +35,11 @@ block content
 							.name Summer Salad
 						for r in recipes
 							if (r.cat == "Appetizer")
-								.tags= r.tags
-								a(href='#{r.pdf}')
-									img(src="#{r.image}")
-									.name= r.name
+								li
+									.tags= r.tags
+									a(href='#{r.pdf}')
+										img(src="#{r.image}")
+										.name= r.name
 			#main.type
 				.title Main
 				.images
@@ -55,11 +57,12 @@ block content
 							img(src='http://upload.wikimedia.org/wikipedia/commons/7/75/Newton_HokkienMee.JPG')
 							.name Hokkien Mee
 						for r in recipes
-							if (r.cat == "Main")
-								.tags= r.tags
-								a(href='#{r.pdf}')
-									img(src="#{r.image}")
-									.name= r.name
+							li
+								if (r.cat == "Main")
+									.tags= r.tags
+									a(href='#{r.pdf}')
+										img(src="#{r.image}")
+										.name= r.name
 			#dessert.type
 				.title Desserts
 				.images
@@ -75,10 +78,11 @@ block content
 							.name berry tart    
 						for r in recipes
 							if (r.cat == "Dessert")
-								a(href='#{r.pdf}')
-									.tags= r.tags
-									img(src="#{r.image}")
-									.name= r.name
+								li
+									a(href='#{r.pdf}')
+										.tags= r.tags
+										img(src="#{r.image}")
+										.name= r.name
 	script(src='http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js')
 	script(src='http://listjs.com/no-cdn/list.js')
 	script(src='/js/recipes.js')
