@@ -77,5 +77,9 @@ router.get('/post', function(req,res){
 	res.render('samplepost');
 });
 
+router.get('/post/add', function(req,res){
+	res.render('postadd');
+});
+
 
 module.exports = router;

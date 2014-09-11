@@ -1,0 +1,8 @@
+extends bloglayout
+
+block content
+	form#form(action='blogupload.php', method='post', enctype='multipart/form-data')
+		input#image(type='file', name='image')
+		br
+		br
+		button#submit Add
