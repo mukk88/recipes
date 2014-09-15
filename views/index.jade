@@ -20,8 +20,11 @@ block content
 					option Dessert
 					option Appetizer
 				br
-				label(for='image') Image:
-				input#image(type='file', name='image')
+				label(for='image') Image - File / Link :
+				br
+				input#image(type='file', name='image') 
+				| /
+				input#imagetext(type='text', name='imagetext')
 				br
 				label(for='pdf') Recipe PDF:
 				input#pdf(type='file', name='pdf')

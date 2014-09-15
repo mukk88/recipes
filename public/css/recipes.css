@@ -130,6 +130,7 @@ a{
 #form select,
 #form input[type=file]{
 	margin-left: 1.5em;
+	margin-right: 1.5em;
 }
 
 #form input[type=text]{

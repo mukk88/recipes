@@ -2,6 +2,9 @@ $(function(){
 
 	$('#submit').click(function(){
 		var imgname = 'images/' + $('#image').val().replace(/^.*[\\\/]/, '');
+		if(imgname=='images/'){
+			imgname = $('#imagetext').val();
+		}
 		var pdfname = 'images/pdf/' + $('#pdf').val().replace(/^.*[\\\/]/, '');
 		var title = $('#title').val();
 		var cat = $("#cat").find(":selected").text();
