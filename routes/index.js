@@ -81,5 +81,9 @@ router.get('/post/add', function(req,res){
 	res.render('postadd');
 });
 
+router.get('/blog/insta', function(req,res){
+	res.render('bloginsta');
+});
+
 
 module.exports = router;
