@@ -85,6 +85,7 @@ router.get('/blog/insta', function(req,res){
 	res.render('bloginsta');
 });
 
+
 router.get('/dice', function(req,res){
 	res.render('dice');
 });
