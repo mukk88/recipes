@@ -1,17 +1,15 @@
 html
   head
     title dice
+    link(rel="stylesheet", type="text/css", href="/css/dice.css")
+    script(src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js")
+    script(src="/js/dice.js")
   body
-    div#status hello
-    script
-      window.addEventListener("devicemotion", detectShake);
-      function detectShake(evt) {
-      var status = document.getElementById("status");
-      status.innerHTML = "shaking";
-      var accl = evt.acceleration;
-      if (accl.x > 1.5 || accl.y > 1.5 || accl.z > 1.5) {
-      	status.innerHTML = "EARTHQUAKE!!!";
-      } else {
-      	status.innerHTML = "All systems go!";
-      }
-      }
+    #area
+      #cube
+        .side.front
+        .side.back
+        .side.bottom
+        .side.top
+        .side.right
+        .side.left

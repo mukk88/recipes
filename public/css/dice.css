@@ -1,0 +1,110 @@
+body {
+}
+#area {
+    -webkit-perspective: 1000px;
+    -moz-perspective: 1000px;
+    -ms-perspective: 1000px;
+    -webkit-perspective-origin: 50% 50%;
+    -moz-perspective-origin: 50% 50%;
+    -ms-perspective-origin: 50% 50%;
+    position:relative;
+    top:200px;
+    left:200px;
+    height: 100px;
+    width:100px;
+
+}
+#cube {
+    position:absolute;
+    top:0px;
+    left:0px;
+    height:100px;
+    width:100px;
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
+    -webkit-transform-origin: 50% 50%;
+    -moz-transform-origin: 50% 50%;
+    -ms-transform-origin: 50% 50%;
+}
+
+.side{
+    height:90px;
+    width:90px;
+    border:5px rgba(215,215,215,1) solid;
+    position:absolute;
+    border-radius:10px;
+    background-color: rgba(215,215,215,1) ;
+    -webkit-transform-origin: 50% 50%;
+    -moz-transform-origin: 50% 50%;
+    -ms-transform-origin: 50% 50%;
+}
+
+.side.front{
+    -webkit-transform:rotateY(0deg) translateZ(50px);
+    -moz-transform:rotateY(0deg) translateZ(50px);
+    -ms-transform:rotateY(0deg) translateZ(50px);
+    background-image:url("images/dice-1-md.png"); 
+    background-size: 100%;
+    z-index:1;
+    border:5px rgba(255,255,255,1) solid;
+    -webkit-backface-visibility:                  hidden;
+}
+
+
+.side.back{
+    -webkit-transform:rotateY(180deg) rotateZ(-90deg) translateZ(50px) ;
+    -moz-transform:rotateY(180deg) rotateZ(-90deg) translateZ(50px) ;
+    -ms-transform:rotateY(180deg) rotateZ(-90deg) translateZ(50px) ;
+    background-image:url("images/dice-6-md.png"); 
+    background-size: 100%;
+    z-index:1;
+    border:5px rgba(255,255,255,1) solid;
+    -webkit-backface-visibility:                  hidden;
+}
+
+.side.bottom{
+    -webkit-transform:rotateX(-90deg)  translateZ(50px);
+    -moz-transform:rotateX(-90deg)  translateZ(50px);
+    -ms-transform:rotateX(-90deg)  translateZ(50px);
+    background-image:url("images/dice-2-md.png"); 
+    background-size: 100%;
+    z-index:1;
+    border:5px rgba(255,255,255,1) solid;
+    -webkit-backface-visibility:                  hidden;
+}
+
+.side.top{
+    -webkit-transform:rotateX(90deg) rotateZ(90deg) translateZ(50px) ;
+    -moz-transform:rotateX(90deg) rotateZ(90deg) translateZ(50px) ;
+    -ms-transform:rotateX(90deg) rotateZ(90deg) translateZ(50px) ;
+    background-image:url("images/dice-5-md.png"); 
+    background-size: 100%;
+    z-index:1;
+    border:5px rgba(255,255,255,1) solid;
+    -webkit-backface-visibility:                  hidden;
+}
+
+.side.right{
+    -webkit-transform:rotateY(90deg) rotateZ(-90deg)  translateZ(50px) ;
+    -moz-transform:rotateY(90deg) rotateZ(-90deg)  translateZ(50px) ;
+    -ms-transform:rotateY(90deg) rotateZ(-90deg)  translateZ(50px) ;
+    background-image:url("images/dice-3-md.png"); 
+    background-size: 100%;
+    z-index:1;
+    border:5px rgba(255,255,255,1) solid;
+    -webkit-backface-visibility:                  hidden;
+}
+
+.side.left{
+    -webkit-transform:rotateY(-90deg) translateZ(50px);
+    -moz-transform:rotateY(-90deg) translateZ(50px);
+    -ms-transform:rotateY(-90deg) translateZ(50px);
+    background-image:url("images/dice-4-md.png"); 
+    background-size: 100%;
+    z-index:1;
+    border:5px rgba(255,255,255,1) solid;
+    -webkit-backface-visibility:                  hidden;
+}
+
+
