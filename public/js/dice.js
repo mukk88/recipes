@@ -81,7 +81,7 @@ $(document).ready(function(){
 
 	//lets go
 	// setTimeout(rotateCube, 1000);
-	$('start').click(function(){
+	$('#start').click(function(){
 		X = 0;
 		Y = 0;
 		Z = 0;
@@ -91,7 +91,7 @@ $(document).ready(function(){
 		yMult = 1 + Math.random();
 		zMult = 1 + Math.random();
 		setTimeout(rotateCube, 1000);
-	})
+	});
 
 	
 });
