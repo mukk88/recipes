@@ -85,6 +85,10 @@ $(document).ready(function(){
 		X = 0;
 		Y = 0;
 		Z = 0;
+		top = 0;
+		left = 0;
+		topChange = 1;
+		leftChange = 2;
 		rotation = 6;
 		speed = 10;
 		xMult = 1 + Math.random();
