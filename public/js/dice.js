@@ -2,9 +2,8 @@
 
 $(document).ready(function(){
 
-	
 	var X=0,Y=0,Z=0;
-	var top = 0;
+	var topp = 0;
 	var left = 0;
 	var topChange = 1;
 	var leftChange = 2;
@@ -16,6 +15,9 @@ $(document).ready(function(){
 	var yMult = 1 + Math.random();
 	var zMult = 1 + Math.random();
 	var shaking = false;
+
+	var height = 200;
+
 
 	var rotateCube = function(){
 
@@ -34,17 +36,17 @@ $(document).ready(function(){
 		// $("#cube2").css("transform", "rotateX("+X+"deg) rotateY("+Y+"deg) rotateZ("+Z+"deg)");
 
 		//shift
-		var height = $(window).height() ? $(window).height() : window.innerHeight;
-		if(top == height || top==-1){
+		
+		if(topp >= height || topp <= -1){
 			topChange *= -1;
 		}
 		if(left >= height || left<=-1){
 			leftChange *= -1;
 		}
-		top += topChange;
+		topp += topChange;
 		left += leftChange;
-		$("#cube").css("top", top);
-		$("#cube").css("left", left);
+		$("#cube").css("top", topp + 'px');
+		$("#cube").css("left", left + 'px');
 		// $("#cube2").css("top", top);
 		// $("#cube2").css("left", left+200);
 
@@ -110,7 +112,7 @@ $(document).ready(function(){
 		var x = event.accelerationIncludingGravity.x;
     	var y = event.accelerationIncludingGravity.y;
     	var z = event.accelerationIncludingGravity.z;
-    	console.log(x + ' ' + y + ' ' + z);
+    	// console.log(x + ' ' + y + ' ' + z);
     	var threshold = 12;
     	if((x > threshold || y > threshold || z > threshold ) && !shaking){
     		startShake();
