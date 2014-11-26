@@ -90,7 +90,7 @@ $(document).ready(function(){
 		xMult = 1 + Math.random();
 		yMult = 1 + Math.random();
 		zMult = 1 + Math.random();
-		setTimeout(rotateCube, 1000);
+		rotateCube();
 	});
 
 	
