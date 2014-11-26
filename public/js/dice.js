@@ -15,9 +15,12 @@ $(document).ready(function(){
 	var xMult = 1 + Math.random();
 	var yMult = 1 + Math.random();
 	var zMult = 1 + Math.random();
-
+	var shaking = false;
 
 	var rotateCube = function(){
+
+
+		shaking = true;
 
 		//rotate
 		X+=rotation*xMult;
@@ -28,6 +31,7 @@ $(document).ready(function(){
 		Y = Y % 360;
 		rotation = rotation > 0 ? rotation-0.05 : 0 ;
 		$("#cube").css("transform", "rotateX("+X+"deg) rotateY("+Y+"deg) rotateZ("+Z+"deg)");
+		// $("#cube2").css("transform", "rotateX("+X+"deg) rotateY("+Y+"deg) rotateZ("+Z+"deg)");
 
 		//shift
 		var height = $(window).height() ? $(window).height() : window.innerHeight;
@@ -41,6 +45,8 @@ $(document).ready(function(){
 		left += leftChange;
 		$("#cube").css("top", top);
 		$("#cube").css("left", left);
+		// $("#cube2").css("top", top);
+		// $("#cube2").css("left", left+200);
 
 		//continue
 		if(rotation > 1.2){
@@ -60,8 +66,9 @@ $(document).ready(function(){
 		var curY = Y%90;
 		var curZ = Z%90;
 		$("#cube").css("transform", "rotateX("+X+"deg) rotateY("+Y+"deg) rotateZ("+Z+"deg)");
+		// $("#cube2").css("transform", "rotateX("+X+"deg) rotateY("+Y+"deg) rotateZ("+Z+"deg)");
 
-		if(curY <3 ){
+		if(curY <1 ){
 			rotationY = 0;
 		}
 		if(curZ <1){
@@ -73,15 +80,13 @@ $(document).ready(function(){
 		if(curX > 1 || curY > 1 || curZ > 1){
 			setTimeout(stopCube, speed);
 		}else{
-			console.log(X + ' ' + Y + ' ' + Z);
+			shaking = false;
+			// console.log(X + ' ' + Y + ' ' + Z);
 		}
 	};
 
+	var startShake = function(event){
 
-
-	//lets go
-	// setTimeout(rotateCube, 1000);
-	$('#start').click(function(){
 		X = 0;
 		Y = 0;
 		Z = 0;
@@ -95,7 +100,22 @@ $(document).ready(function(){
 		yMult = 1 + Math.random();
 		zMult = 1 + Math.random();
 		rotateCube();
-	});
+	}
+
+	//lets go
+	// setTimeout(rotateCube, 1000);
+	$('#start').click(startShake);
+
+	window.addEventListener("devicemotion", function(event){
+		var x = event.accelerationIncludingGravity.x;
+    	var y = event.accelerationIncludingGravity.y;
+    	var z = event.accelerationIncludingGravity.z;
+    	console.log(x + ' ' + y + ' ' + z);
+    	var threshold = 12;
+    	if((x > threshold || y > threshold || z > threshold ) && !shaking){
+    		startShake();
+    	}
+	}, true);
 
 	
 });
