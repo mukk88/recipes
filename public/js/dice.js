@@ -9,7 +9,6 @@ $(document).ready(function(){
 	var topChange = 1;
 	var leftChange = 2;
 	var speed = 10;
-	var multiplier = 1;
 	var rotationX;
 	var rotationY;
 	var rotation = 6;
@@ -81,8 +80,18 @@ $(document).ready(function(){
 
 
 	//lets go
-	setTimeout(rotateCube, 1000);
-
+	// setTimeout(rotateCube, 1000);
+	$('start').click(function(){
+		X = 0;
+		Y = 0;
+		Z = 0;
+		rotation = 6;
+		speed = 10;
+		xMult = 1 + Math.random();
+		yMult = 1 + Math.random();
+		zMult = 1 + Math.random();
+		setTimeout(rotateCube, 1000);
+	})
 
 	
 });
