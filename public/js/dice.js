@@ -1,42 +1,54 @@
-
+//todo make shaking local, make var objects
 
 $(document).ready(function(){
-
-	var X=0,Y=0,Z=0;
-	var topp = 0;
-	var left = 0;
-	var topChange = 1;
-	var leftChange = 2;
 	var speed = 10;
-	var rotationX;
-	var rotationY;
-	var rotation = 6;
-	var xMult = 1 + Math.random();
-	var yMult = 1 + Math.random();
-	var zMult = 1 + Math.random();
 	var shaking = false;
-
 	var height = 200;
+	var posititions = {};
+	var dicetotal = 2;
+
+	for(var i=3;i<7;i++){
+		$('#area' + i).hide();
+	}
+
+	for(var i=1;i<7;i++){
+		posititions["#cube" + i] = {};
+		posititions['#cube' + i].topp = 100;
+		posititions['#cube' + i].leftt = 100;
+	}
+
+	var addDice = function(){
+		if(dicetotal>=6){
+			return;
+		}
+		dicetotal++;
+		$('#area' + dicetotal).show();
+	};
+
+	var loseDice = function(){
+		if(dicetotal<=0){
+			return;
+		}
+		$('#area' + dicetotal).hide();
+		dicetotal--;
+	};
 
 
-	var rotateCube = function(){
-
+	var rotateCube = function(cubenum, xm, ym, zm, X,Y,Z, rotation, topChange, leftChange, topp, left){
 
 		shaking = true;
 
 		//rotate
-		X+=rotation*xMult;
-		Y+=rotation*yMult;
-		Z+=rotation*zMult;
+		X+=rotation*xm;
+		Y+=rotation*ym;
+		Z+=rotation*zm;
 		X = X % 360;
 		Z = Z % 360;
 		Y = Y % 360;
 		rotation = rotation > 0 ? rotation-0.05 : 0 ;
-		$("#cube").css("transform", "rotateX("+X+"deg) rotateY("+Y+"deg) rotateZ("+Z+"deg)");
-		// $("#cube2").css("transform", "rotateX("+X+"deg) rotateY("+Y+"deg) rotateZ("+Z+"deg)");
+		$(cubenum).css("transform", "rotateX("+X+"deg) rotateY("+Y+"deg) rotateZ("+Z+"deg)");
 
 		//shift
-		
 		if(topp >= height || topp <= -1){
 			topChange *= -1;
 		}
@@ -45,64 +57,72 @@ $(document).ready(function(){
 		}
 		topp += topChange;
 		left += leftChange;
-		$("#cube").css("top", topp + 'px');
-		$("#cube").css("left", left + 'px');
-		// $("#cube2").css("top", top);
-		// $("#cube2").css("left", left+200);
+		$(cubenum).css("top", topp + 'px');
+		$(cubenum).css("left", left + 'px');
 
 		//continue
 		if(rotation > 1.2){
-			setTimeout(rotateCube, speed);
+			setTimeout(function(){rotateCube(cubenum,xm,ym,zm, X,Y,Z, rotation, topChange, leftChange, topp, left)}, speed);
 		}else{
-			setTimeout(stopCube, speed);
-			rotationX = rotation;
-			rotationY = rotation;
+			posititions[cubenum].topp = topp;
+			posititions[cubenum].leftt = left;
+			setTimeout(function(){stopCube(cubenum, X,Y,Z, rotation, rotation,rotation)}, speed);
 		}
 	};
 
-	var stopCube = function(){
-		X+=rotationX;
-		Y+=rotationY;
-		Z+=rotation;
+	var stopCube = function(cubenum, X,Y,Z, rX, rY, rZ){
+		X+=rX;
+		Y+=rY;
+		Z+=rZ;
 		var curX = X%90;
 		var curY = Y%90;
 		var curZ = Z%90;
-		$("#cube").css("transform", "rotateX("+X+"deg) rotateY("+Y+"deg) rotateZ("+Z+"deg)");
-		// $("#cube2").css("transform", "rotateX("+X+"deg) rotateY("+Y+"deg) rotateZ("+Z+"deg)");
+		$(cubenum).css("transform", "rotateX("+X+"deg) rotateY("+Y+"deg) rotateZ("+Z+"deg)");
 
 		if(curY <1 ){
-			rotationY = 0;
+			rY = 0;
 		}
 		if(curZ <1){
-			rotation = 0;
+			rZ = 0;
 		}
 		if(curX <1 ){
-			rotationX = 0;
+			rX = 0;
 		}
 		if(curX > 1 || curY > 1 || curZ > 1){
-			setTimeout(stopCube, speed);
+			setTimeout(function(){stopCube(cubenum, X,Y,Z, rX, rY, rZ)}, speed);
 		}else{
 			shaking = false;
-			// console.log(X + ' ' + Y + ' ' + Z);
 		}
 	};
 
-	var startShake = function(event){
-
+	var startShake = function(){
+		if(shaking){
+			return;
+		}
 		X = 0;
 		Y = 0;
 		Z = 0;
-		// top = 0;
-		// left = 0;
-		// topChange = 1;
-		// leftChange = 2;
 		rotation = 6;
 		speed = 10;
-		xMult = 1 + Math.random();
-		yMult = 1 + Math.random();
-		zMult = 1 + Math.random();
-		rotateCube();
-	}
+		randomRotateCube('#cube1');
+		randomRotateCube('#cube2');
+		randomRotateCube('#cube3');
+		randomRotateCube('#cube4');
+		randomRotateCube('#cube5');
+		randomRotateCube('#cube6');
+	};
+
+	var randomRotateCube = function(cubenum){
+		var X=0,Y=0,Z=0;
+		var rotation = 6;
+		var topChange = 1.2*Math.random();
+		var leftChange = 1.8*Math.random();
+
+		var ym = 1+ Math.random();
+		var zm = 1+ Math.random();
+		var xm = 1+ Math.random();
+		rotateCube(cubenum, xm, ym, zm, X, Y,Z, rotation, topChange, leftChange, posititions[cubenum].topp, posititions[cubenum].leftt);
+	};
 
 	//lets go
 	// setTimeout(rotateCube, 1000);
@@ -112,12 +132,14 @@ $(document).ready(function(){
 		var x = event.accelerationIncludingGravity.x;
     	var y = event.accelerationIncludingGravity.y;
     	var z = event.accelerationIncludingGravity.z;
-    	// console.log(x + ' ' + y + ' ' + z);
     	var threshold = 12;
     	if((x > threshold || y > threshold || z > threshold ) && !shaking){
     		startShake();
     	}
 	}, true);
+
+	$('#add').click(addDice);
+	$('#minus').click(loseDice);
 
 	
 });
