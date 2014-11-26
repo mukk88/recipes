@@ -30,7 +30,7 @@ $(document).ready(function(){
 		$("#cube").css("transform", "rotateX("+X+"deg) rotateY("+Y+"deg) rotateZ("+Z+"deg)");
 
 		//shift
-		var height = $(window).height();
+		var height = $(window).height() ? $(window).height() : window.innerHeight;
 		if(top == height || top==-1){
 			topChange *= -1;
 		}
@@ -85,10 +85,10 @@ $(document).ready(function(){
 		X = 0;
 		Y = 0;
 		Z = 0;
-		top = 0;
-		left = 0;
-		topChange = 1;
-		leftChange = 2;
+		// top = 0;
+		// left = 0;
+		// topChange = 1;
+		// leftChange = 2;
 		rotation = 6;
 		speed = 10;
 		xMult = 1 + Math.random();
