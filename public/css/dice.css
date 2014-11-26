@@ -44,7 +44,7 @@ body {
     -webkit-transform:rotateY(0deg) translateZ(50px);
     -moz-transform:rotateY(0deg) translateZ(50px);
     -ms-transform:rotateY(0deg) translateZ(50px);
-    background-image:url("images/dice/dice-1-md.png"); 
+    background-image:url("../images/dice/dice-1-md.png"); 
     background-size: 100%;
     z-index:1;
     border:5px rgba(255,255,255,1) solid;
@@ -56,7 +56,7 @@ body {
     -webkit-transform:rotateY(180deg) rotateZ(-90deg) translateZ(50px) ;
     -moz-transform:rotateY(180deg) rotateZ(-90deg) translateZ(50px) ;
     -ms-transform:rotateY(180deg) rotateZ(-90deg) translateZ(50px) ;
-    background-image:url("images/dice/dice-6-md.png"); 
+    background-image:url("../images/dice/dice-6-md.png"); 
     background-size: 100%;
     z-index:1;
     border:5px rgba(255,255,255,1) solid;
@@ -67,7 +67,7 @@ body {
     -webkit-transform:rotateX(-90deg)  translateZ(50px);
     -moz-transform:rotateX(-90deg)  translateZ(50px);
     -ms-transform:rotateX(-90deg)  translateZ(50px);
-    background-image:url("images/dice/dice-2-md.png"); 
+    background-image:url("../images/dice/dice-2-md.png"); 
     background-size: 100%;
     z-index:1;
     border:5px rgba(255,255,255,1) solid;
@@ -78,7 +78,7 @@ body {
     -webkit-transform:rotateX(90deg) rotateZ(90deg) translateZ(50px) ;
     -moz-transform:rotateX(90deg) rotateZ(90deg) translateZ(50px) ;
     -ms-transform:rotateX(90deg) rotateZ(90deg) translateZ(50px) ;
-    background-image:url("images/dice/dice-5-md.png"); 
+    background-image:url("../images/dice/dice-5-md.png"); 
     background-size: 100%;
     z-index:1;
     border:5px rgba(255,255,255,1) solid;
@@ -89,7 +89,7 @@ body {
     -webkit-transform:rotateY(90deg) rotateZ(-90deg)  translateZ(50px) ;
     -moz-transform:rotateY(90deg) rotateZ(-90deg)  translateZ(50px) ;
     -ms-transform:rotateY(90deg) rotateZ(-90deg)  translateZ(50px) ;
-    background-image:url("images/dice/dice-3-md.png"); 
+    background-image:url("../images/dice/dice-3-md.png"); 
     background-size: 100%;
     z-index:1;
     border:5px rgba(255,255,255,1) solid;
@@ -100,7 +100,7 @@ body {
     -webkit-transform:rotateY(-90deg) translateZ(50px);
     -moz-transform:rotateY(-90deg) translateZ(50px);
     -ms-transform:rotateY(-90deg) translateZ(50px);
-    background-image:url("images/dice/dice-4-md.png"); 
+    background-image:url("../images/dice/dice-4-md.png"); 
     background-size: 100%;
     z-index:1;
     border:5px rgba(255,255,255,1) solid;
