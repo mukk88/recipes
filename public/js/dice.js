@@ -33,7 +33,6 @@ $(document).ready(function(){
 		dicetotal--;
 	};
 
-
 	var rotateCube = function(data, topp, left){
 
 		shaking = true;
@@ -110,7 +109,7 @@ $(document).ready(function(){
 		X = 0;
 		Y = 0;
 		Z = 0;
-		rotation = 6;
+		rotation = 8;
 		speed = 10;
 		randomRotateCube('#cube1');
 		randomRotateCube('#cube2');
