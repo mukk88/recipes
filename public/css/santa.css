@@ -1,0 +1,56 @@
+body{
+    font-family: 'Waiting for the Sunrise', cursive;
+}
+
+.container{
+    width:60%;
+    min-width:250px;
+    left:0;
+    right:0;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+select{
+    font-family: 'Waiting for the Sunrise', cursive;
+    font-weight:bold;
+    margin-bottom:1em;
+    font-size:0.5em;
+}
+
+.container h1{
+    font-size:4em;
+    margin-top: 1em;    
+}
+
+.container .text1{
+    font-size:0.5em;
+    margin-bottom: 0.7em;
+}
+
+.container .button{
+    border:1px solid;
+    padding:0.2em;
+    width:15%;
+    text-align:center;
+    font-size:0.5em;
+    margin-top:1em;
+    min-width:160px;
+}
+
+.container .button:hover{
+    background-color:red;
+    cursor:pointer;
+}
+
+.container .button:active{
+    background-color:red;
+    cursor:pointer;
+    border:2px solid;
+}
+
+.container #result{
+    font-size:2em;
+    font-weight:bold;
+    margin-top: 2em;
+}

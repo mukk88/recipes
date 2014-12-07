@@ -1,0 +1,38 @@
+html
+    head
+        title santa
+        link(rel="stylesheet", type="text/css", href="/css/santa.css")
+        script(src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js")
+        link(rel="stylesheet", type="text/css", href="http://fonts.googleapis.com/css?family=Waiting+for+the+Sunrise")
+        script(src="/js/santa.js")
+    body
+        if !person
+            .container
+                h1 Secret Santa!
+                  |         
+                  .text1 Who are you?
+                  select#family
+                    option(value='1') Leonard
+                    |     
+                    option(value='2') Rita
+                    |     
+                    option(value='3') Val
+                    |     
+                    option(value='4') Pace
+                    |     
+                    option(value='5') Andrew
+                    |     
+                    option(value='6') Katherine
+                    |     
+                    option(value='7') Mark
+                    |     
+                    option(value='8') Isabelle
+                    |     
+                    option(value='9') Cheryl
+                  br
+                  .text1 Find out who you are giving a present to this year!
+                  |  
+                  #who.button Tell me who!
+        else
+            .container
+                #result You are giving a present to #{person} 
