@@ -1,34 +1,34 @@
 var express = require('express');
 var mongoose = require('mongoose');
-var autoIncrement = require('mongoose-auto-increment');
+// var autoIncrement = require('mongoose-auto-increment');
 var router = express.Router();
 
 //mongo set up
-var mongoOptions = 
-{ 
-	db: {safe: true }, 
-	server: { 
-		auto_reconnect: true, 
-		socketOptions: {keepAlive: 1}  
-	} 
-};
+// var mongoOptions = 
+// { 
+// 	db: {safe: true }, 
+// 	server: { 
+// 		auto_reconnect: true, 
+// 		socketOptions: {keepAlive: 1}  
+// 	} 
+// };
 
-var connectionString = "mongodb://12345:12345@ds052837.mongolab.com:52837/recipes";
-mongoose.connect(connectionString, mongoOptions);
-var connection = mongoose.createConnection(connectionString);
-autoIncrement.initialize(connection);
+// var connectionString = "mongodb://12345:12345@ds052837.mongolab.com:52837/recipes";
+// mongoose.connect(connectionString, mongoOptions);
+// var connection = mongoose.createConnection(connectionString);
+// autoIncrement.initialize(connection);
 
-var recipeSchema = mongoose.Schema({
-	name:String,
-	image:String,
-	pdf:String,
-	cat:String,
-	tags:String
-});
+// var recipeSchema = mongoose.Schema({
+// 	name:String,
+// 	image:String,
+// 	pdf:String,
+// 	cat:String,
+// 	tags:String
+// });
 
-recipeSchema.plugin(autoIncrement.plugin, { model: 'Recipe', startAt: 1 });
+// recipeSchema.plugin(autoIncrement.plugin, { model: 'Recipe', startAt: 1 });
 
-var Recipe = mongoose.model('Recipe', recipeSchema);
+// var Recipe = mongoose.model('Recipe', recipeSchema);
 
 /* GET and POST */
 router.get('/add', function(req, res) {
@@ -36,11 +36,13 @@ router.get('/add', function(req, res) {
 });
 
 router.get('/', function(req,res){
-	var allRecipes;
-	Recipe.find({}, function(err,allrecipes){
-		res.render('recipes', {recipes:allrecipes});
-		console.log(allrecipes);
-	});
+	res.render('recipes');
+
+	// var allRecipes;
+	// Recipe.find({}, function(err,allrecipes){
+	// 	res.render('recipes', {recipes:allrecipes});
+	// 	console.log(allrecipes);
+	// });
 });
 
 router.post('/recipe/add', function(req,res){

@@ -1,58 +1,93 @@
-extends layout
-
-block content
-	#recipes.container
-		.searchcontainer
-			input#totalsearch.search(placeholder='Search')
-			a(href="/add")
-				.btn add
-		.top
-			.title woo fam trade secrets
-		.main
-			#breakfast.type
-				.title Breakfast
-				.images
-					ul.list
-						for r in recipes
-							if (r.cat == "Breakfast")
-								li
-									.tags= r.tags
-									a(href='#{r.pdf}')
-										img(src="#{r.image}")
-										.name= r.name
-			#appetizer.type
-				.title Appetizer
-				.images
-					ul.list
-						for r in recipes
-							if (r.cat == "Appetizer")
-								li
-									.tags= r.tags
-									a(href='#{r.pdf}')
-										img(src="#{r.image}")
-										.name= r.name
-			#main.type
-				.title Main
-				.images
-					ul.list
-						for r in recipes
-							li
-								if (r.cat == "Main")
-									.tags= r.tags
-									a(href='#{r.pdf}')
-										img(src="#{r.image}")
-										.name= r.name
-			#dessert.type
-				.title Desserts
-				.images
-					ul.list 
-						for r in recipes
-							if (r.cat == "Dessert")
-								li
-									a(href='#{r.pdf}')
-										.tags= r.tags
-										img(src="#{r.image}")
-										.name= r.name
-	script(src='http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js')
-	script(src='http://listjs.com/no-cdn/list.js')
-	script(src='/js/recipes.js')
+html
+  head
+    title recipes
+    | &#x9;
+    link(rel='stylesheet', type='text/css', href='/css/recipes.css')
+    | &#x9;
+    link(href='http://fonts.googleapis.com/css?family=Waiting+for+the+Sunrise', rel='stylesheet', type='text/css')
+  body
+    #recipes.container
+      .searchcontainer
+        input#totalsearch.search(placeholder='Search')
+        | &#x9;&#x9;&#x9;
+        .btn add
+      | &#x9;&#x9;
+      .top
+        .title woo fam trade secrets
+      | &#x9;&#x9;
+      .main
+        #breakfast.type
+          .title Breakfast
+          | &#x9;&#x9;&#x9;&#x9;
+          .images
+            ul.list
+              li
+                img(src='http://busybeekate.com/wp-content/uploads/2014/07/brown-sugar-blueberry-muffins-2.jpg')
+                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                .name Blueberrry muffins
+              | &#x9;&#x9;&#x9;&#x9;&#x9;    
+              li
+                img(src='http://2.bp.blogspot.com/_AWEhM2Nug4g/S9S4YGCv_II/AAAAAAAAHKI/vyOIHwmya_0/s1600/Scone+1.jpg')
+                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                .name Scones
+        | &#x9;&#x9;&#x9;
+        #appetizer.type
+          .title Appetizer
+          | &#x9;&#x9;&#x9;&#x9;
+          .images
+            ul.list
+              li
+                img(src='http://blogs.mydevstaging.com/blogs/daily-dish/files/2012/04/mexican-salad-2.jpg')
+                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                .name Summer Salad
+        | &#x9;&#x9;&#x9;
+        #main.type
+          .title Main
+          | &#x9;&#x9;&#x9;&#x9;
+          .images
+            ul.list
+              li
+                img(src='http://2.bp.blogspot.com/-jf2bFOUlEW4/UM6CQ34-A9I/AAAAAAAAAaM/2UrpBPQlp0A/s1600/indianchickencurry.JPG')
+                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                .name Curry chicken
+              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+              li
+                img(src='https://warosu.org/data/ck/img/0053/93/1398860607654.jpg')
+                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                .name Chicken rice
+              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+              li
+                img(src='http://www.laksasingapore.com/wp-content/uploads/2011/11/Laksa33.jpg')
+                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                .name Laksa
+              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+              li
+                img(src='http://upload.wikimedia.org/wikipedia/commons/7/75/Newton_HokkienMee.JPG')
+                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                .name Hokkien Mee
+        | &#x9;&#x9;&#x9;
+        #dessert.type
+          .title Desserts
+          | &#x9;&#x9;&#x9;&#x9;
+          .images
+            ul.list
+              li
+                img(src='http://cimages.proflowers.com/is/image/ProvideCommerce/GFB_13_SCA6AMERBTY_PR1000_W1_SQ')
+                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                .name chocolate cake
+              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+              li
+                img(src='http://chasingdelicious.com/wp-content/uploads/2011/05/CAKE-CU-SMALL.png')
+                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                .name berry cake
+              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+              li
+                img(src='http://cdn-media-2.lifehack.org/wp-content/files/2013/11/20-Easy-And-Amazingly-Tasty-Dessert-Recipes.jpg')
+                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                .name berry tart
+    | &#x9;
+    script(src='http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js')
+    | &#x9;
+    script(src='http://listjs.com/no-cdn/list.js')
+    | &#x9;
+    script(src='/js/recipes.js')

@@ -1,0 +1,58 @@
+extends layout
+
+block content
+	#recipes.container
+		.searchcontainer
+			input#totalsearch.search(placeholder='Search')
+			a(href="/add")
+				.btn add
+		.top
+			.title woo fam trade secrets
+		.main
+			#breakfast.type
+				.title Breakfast
+				.images
+					ul.list
+						for r in recipes
+							if (r.cat == "Breakfast")
+								li
+									.tags= r.tags
+									a(href='#{r.pdf}')
+										img(src="#{r.image}")
+										.name= r.name
+			#appetizer.type
+				.title Appetizer
+				.images
+					ul.list
+						for r in recipes
+							if (r.cat == "Appetizer")
+								li
+									.tags= r.tags
+									a(href='#{r.pdf}')
+										img(src="#{r.image}")
+										.name= r.name
+			#main.type
+				.title Main
+				.images
+					ul.list
+						for r in recipes
+							li
+								if (r.cat == "Main")
+									.tags= r.tags
+									a(href='#{r.pdf}')
+										img(src="#{r.image}")
+										.name= r.name
+			#dessert.type
+				.title Desserts
+				.images
+					ul.list 
+						for r in recipes
+							if (r.cat == "Dessert")
+								li
+									a(href='#{r.pdf}')
+										.tags= r.tags
+										img(src="#{r.image}")
+										.name= r.name
+	script(src='http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js')
+	script(src='http://listjs.com/no-cdn/list.js')
+	script(src='/js/recipes.js')
