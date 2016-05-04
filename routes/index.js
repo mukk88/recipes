@@ -248,5 +248,8 @@ router.get('/santa', function(req,res){
 
 });
 
+router.get('/insurance', function(req,res){
+	res.render('insurance');
+});
 
 module.exports = router;
