@@ -1,34 +1,86 @@
+doctype html
 html
-    head
-        title santa
-        link(rel="stylesheet", type="text/css", href="/css/santa.css")
-        script(src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js")
-        link(rel="stylesheet", type="text/css", href="http://fonts.googleapis.com/css?family=Waiting+for+the+Sunrise")
-        script(src="/js/santa.js")
-    body
-        if !person
-            .container
-                h1 Secret Santa!
-                  |         
-                  .text1 Who are you?
-                  select#family
-                    option(value='3') Val
-                    |     
-                    option(value='4') Pace
-                    |     
-                    option(value='5') Andrew
-                    |     
-                    option(value='6') Katherine
-                    |     
-                    option(value='7') Mark
-                    |     
-                    option(value='8') Isabelle
-                    |     
-                    option(value='9') Cheryl
-                  br
-                  .text1 Find out who you are giving a present to this year!
-                  |  
-                  #who.button Tell me who!
-        else
-            .container
-                #result You are giving a present to #{person} 
+  head
+    title secret santa
+    script(type='text/javascript', src='http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js')
+    script(type='text/javascript').
+      $(document).ready(function () {
+      data = {}
+      data['Eleana'] = {to:'Adelia',pw:'T22WN'};
+      data['Gee Yean'] = {to:'Pris ',pw:'EYRS7'};
+      data['Belle'] = {to:'Charles',pw:'1AQ9I'};
+      data['Mark'] = {to:'LT',pw:'21FLY'};
+      data['Isaac'] = {to:'Ryan',pw:'R8JM7'};
+      data['Evangeline'] = {to:'Amanda',pw:'HF521'};
+      data['Ethan '] = {to:'Jeff',pw:'CNCO9'};
+      data['Mama'] = {to:'Nicole',pw:'A10US'};
+      data['Lily'] = {to:'Rosie',pw:'B8N7W'};
+      data['Rosie'] = {to:'Eleana',pw:'5BA4L'};
+      data['LT'] = {to:'Isaac',pw:'CEUNH'};
+      data['Dora '] = {to:'Ee',pw:'A79FR'};
+      data['Collin'] = {to:'Mama',pw:'OQJD7'};
+      data['Isaiah'] = {to:'Gbk',pw:'BXLUU'};
+      data['Gerald '] = {to:'Lily',pw:'KC1GV'};
+      data['Gbk'] = {to:'Isaiah',pw:'W3N9Z'};
+      data['Ryan'] = {to:'Gerald ',pw:'5W379'};
+      data['Adelia'] = {to:'Belle',pw:'C2IQ7'};
+      data['Amanda'] = {to:'Collin',pw:'7EQQM'};
+      data['Pris '] = {to:'Dora ',pw:'IYPIA'};
+      data['Carrie'] = {to:'Mark',pw:'ZU36E'};
+      data['Jeff'] = {to:'Carrie',pw:'917G7'};
+      data['Ee'] = {to:'Ethan ',pw:'RS4ND'};
+      data['Charles'] = {to:'Gee Yean',pw:'IH2YH'};
+      data['Nicole'] = {to:'Evangeline',pw:'U71A5'};
+      $('#submit').click(function(){
+      var name = $('#name').val()
+      var pw = $('#pw').val()
+      if (pw == data[name].pw) {
+      $('#result').html('You are giving to ' + data[name].to + '!')
+      } else {
+      $('#result').html('Incorrect password.')
+      }
+      })
+      });
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css')
+    link(rel='stylesheet', href='http://fonts.googleapis.com/css?family=Waiting+for+the+Sunrise')
+    style.
+      body{
+      font-family: 'Waiting for the Sunrise', cursive;
+      font-size:3em;
+      }
+  body
+    .container-fluid(style='margin:auto; margin-top:100px; width:70%')
+      div Tell me who you are:
+      select#name
+        option(value='Eleana') Eleana
+        option(value='Gee Yean') Gee Yean
+        option(value='Belle') Belle
+        option(value='Mark') Mark
+        option(value='Isaac') Isaac
+        option(value='Evangeline') Evangeline
+        option(value='Ethan ') Ethan 
+        option(value='Mama') Mama
+        option(value='Lily') Lily
+        option(value='Rosie') Rosie
+        option(value='LT') LT
+        option(value='Dora ') Dora 
+        option(value='Collin') Collin
+        option(value='Isaiah') Isaiah
+        option(value='Gerald ') Gerald 
+        option(value='Gbk') Gbk
+        option(value='Ryan') Ryan
+        option(value='Adelia') Adelia
+        option(value='Amanda') Amanda
+        option(value='Pris ') Pris 
+        option(value='Carrie') Carrie
+        option(value='Jeff') Jeff
+        option(value='Ee') Ee
+        option(value='Charles') Charles
+        option(value='Nicole') Nicole
+      // <input type="text" name="name" id="name">
+      div Password:
+      input#pw(type='password', name='pw')
+      div(style='margin-top: 20px;')
+        button#submit(style='padding:10px') Tell me who!
+      #result(style='margin-top: 20px;')
+        // You are giving a present to Person!
